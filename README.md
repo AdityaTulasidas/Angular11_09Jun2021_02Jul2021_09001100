@@ -762,6 +762,37 @@ is a javascript framework used to develop SPA / PWA applications.
 
                             json-server --port 9999 --watch datafile.json
 
+            json-server     is a javascript tool that generates fake rest api on a given
+                            json file.
+
+                            npm --save install json-server
+
+                            json-server --port 9999 --watch datafile.json
+
+            steps to run fake fake api        
+               npm --save install json-server
+
+               create json file 
+                    add data in this file 
+                        eg:{
+                            "users": [
+                            {
+                            "id": 1,
+                            "firstName": "Vamsy Kiran",
+                            "lastName": "Aripaka"
+                            }]
+                        }
+                mention this data in environmet.ts
+                    eg:
+                      usersEndPoint:"http://localhost:9999/users"
+                metion in scripts:[
+                     "fakeApi": "json-server --port 9999 --watch ./data/expenses.json"
+                ] 
+
+                finally to use command 
+                    npm run fakeApi to make fake Api up   
+
+                    refer ang-proj05 for referance
         
         Using HttpClient to consume a REST api
         ------------------------------------------------------------------
